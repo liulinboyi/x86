@@ -1,0 +1,10 @@
+     1                                          ;计算除法
+     2                                          ;378除以37的结果
+     3                                  start:
+     4 00000000 B87A01                          mov ax, 378
+     5 00000003 B325                            mov bl, 37
+     6 00000005 F6F3                            div bl;AL => 商 AH => 余数
+     7                                  
+     8                                  current:
+     9 00000007 00<rep 1F7h>                    times 510 - (current - start) db 0
+    10 000001FE 55AA                            db 0x55, 0xAA

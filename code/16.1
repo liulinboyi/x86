@@ -1,0 +1,6 @@
+start:
+      mov al,11111000b
+      add al,00001000b
+finish:
+times 510 - (finish - start) db 0
+      db 0x55,0xaa

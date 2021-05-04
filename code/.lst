@@ -1,0 +1,16 @@
+     1                                          ;计算除法
+     2                                          ;65535除以10的结果
+     3                                  start:
+     4                                          ;mov ax, 65535
+     5                                          ;mov bl, 10
+     6                                          ;div bl;AX => 商(6553) DX => 余数(5)  有错误
+     7                                          ;正解
+     8 00000000 BA0000                          mov dx, 0
+     9 00000003 B8FFFF                          mov ax, 65535
+    10 00000006 31DB                            xor bx, bx
+    11 00000008 F7F3                            div bx
+    12                                  
+    13                                  
+    14                                  current:
+    15 0000000A 00<rep 1F4h>                    times 510 - (current - start) db 0
+    16 000001FE 55AA                            db 0x55, 0xAA

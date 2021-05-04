@@ -1,0 +1,6 @@
+     1                                  start:
+     2 00000000 B0F8                          mov al,11111000b
+     3 00000002 0408                          add al,00001000b
+     4                                  finish:
+     5 00000004 00<rep 1FAh>            times 510 - (finish - start) db 0
+     6 000001FE 55AA                          db 0x55,0xaa
