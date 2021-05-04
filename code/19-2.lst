@@ -1,0 +1,9 @@
+     1                                  SECTION data1 align=16 vstart=0
+     2 00000000 CEFA                    mydata dw 0xface
+     3                                  
+     4                                  section data2 align=16 vstart=0
+     5 00000000 68656C6C6F              string db 'hello'
+     6                                  
+     7                                  section code align=16 vstart=0
+     8 00000000 BB[0000]                        mov bx,mydata
+     9 00000003 BE[0000]                        mov si,string

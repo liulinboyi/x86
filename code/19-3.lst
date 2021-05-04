@@ -1,0 +1,10 @@
+     1                                  section s1
+     2 00000000 [0000][0500][0000]      offset dw str1,str2,num
+     3                                  
+     4                                  section s2 align=16 vstart=0x100
+     5 00000000 68656C6C6F              str1 db 'hello'
+     6 00000005 776F726C64              str2 db 'world'
+     7                                  
+     8                                  section s3 align=16
+     9 00000000 AD0B                    num dw 0xbad
+    10                                  
